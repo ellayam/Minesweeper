@@ -63,7 +63,7 @@ public boolean isWon() {
   return true;
 }
 
-public void displayLosingMessage() {  
+public void displayLosingMessage() { 
   buttons[9][6].setLabel(" ");
   buttons[9][7].setLabel(" ");
   buttons[9][8].setLabel(" ");
@@ -216,13 +216,13 @@ public class MSButton {
 
   public void draw () {    
     if (flagged) {
-      fill(0);
+      fill(111,108,227);
     } else if (clicked && mines.contains(this)) {
-      fill(255, 0, 0);
+      fill(227,108,191);
     } else if (clicked) {
-      fill(200);
+      fill(125,195,229);
     } else {
-      fill(100);
+      fill(200,230,245);
     }
     rect(x, y, width, height);
     fill(0);
@@ -247,9 +247,7 @@ public class MSButton {
   
   public void endGame() {
     if (clicked) {
-      fill(200);
-    } else {
-      fill(100);
+      fill(125,195,229);
     }
     rect(x, y, width, height);
     fill(0);
